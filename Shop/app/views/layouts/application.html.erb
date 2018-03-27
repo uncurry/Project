@@ -13,15 +13,19 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <%= link_to 'Home', root_path %>
+
+  <%= render 'pages/header' %>
+
   <body>
   	<div id="content" class="container">
-    <header id="content-header">
-        <div id="price-container">
-          <span class="glyphicon glyphicon-tag"></span><span class="price">$9.99</span>
-        </div>
-       <%= image_tag('header-image.jpg', id: "content-head-image", alt: "HeaderImage") %>
-    </header>
-    <%= yield %>
-</div>
+   		<header id="content-header">
+        	<div id="price-container">
+          		<span class="glyphicon glyphicon-tag"></span><span class="price">$9.99</span>
+        	</div>
+       		<%= image_tag('header-image.jpg', id: "content-head-image", alt: "HeaderImage") %>
+    	</header>
+    	<%= yield %>
+	</div>
   </body>
 </html>
